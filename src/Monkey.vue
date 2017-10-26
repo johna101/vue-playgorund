@@ -16,6 +16,8 @@
       <button @click='changeComp'>Change Component</button>
     <component v-bind:is='comp'></component>
     <very-simple></very-simple>
+    <very-simple></very-simple>
+    <very-simple></very-simple>
   </div>
 </template>
 
@@ -44,6 +46,7 @@ var awaycomp = {
 export default class Monkey extends Vue {
   @Prop({default: 'John'}) 
   name: string;
+
   posts: any[] = [];
   errors: any[];
   comp = homecomp;
@@ -67,7 +70,7 @@ export default class Monkey extends Vue {
   
   save() { 
     this.$emit("save", this.newName);
-    this.person.age++; 29
+    this.person.age++; 
     };
   
   changeComp() {
